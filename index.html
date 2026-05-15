@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Solutions & AI Lab | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .lang-hidden { display: none; }
+        .gradient-bg { background: linear-gradient(135deg, #1a1a1a 0%, #0f172a 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; border-color: #14a800; }
+        .hero-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://github.com/bt0501/portfolio/blob/main/photo_2026-05-15_23-50-27.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Стили для увеличения картинок */
+        .zoomable { cursor: zoom-in; transition: opacity 0.3s; }
+        .zoomable:hover { opacity: 0.9; }
+        #lightbox { display: none; position: fixed; z-index: 100; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); cursor: zoom-out; align-items: center; justify-content: center; padding: 20px; }
+        #lightbox img { max-width: 95%; max-height: 95%; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter text-white">DIGITAL<span class="text-green-500">LAB</span></div>
+            <div class="flex items-center gap-6">
+                <button onclick="toggleLang()" class="bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded text-sm font-medium border border-gray-700">
+                    <span class="lang-en">RU</span><span class="lang-ru lang-hidden">EN</span>
+                </button>
+                <a href="https://t.me/bai0501" class="text-green-500 hover:text-green-400 font-bold"><i class="fab fa-telegram mr-2"></i>@bai0501</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-banner h-[500px] flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+                <span class="lang-en">Smart Solutions for the Digital Age</span>
+                <span class="lang-ru lang-hidden">Умные решения для цифровой эпохи</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                <span class="lang-en">AI Image Processing | Cross-Platform Apps | Blockchain Tools</span>
+                <span class="lang-ru lang-hidden">AI обработка фото | Кроссплатформенные приложения | Инструменты для блокчейна</span>
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold">
+                    <span class="lang-en">Software Development & Coding</span>
+                    <span class="lang-ru lang-hidden">Разработка ПО и Кодинг</span>
+                </h2>
+                <div class="h-[2px] bg-green-500 flex-grow"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 card-hover shadow-2xl">
+                    <img src="https://github.com/bt0501/portfolio/blob/main/Gemini_Generated_Image_v31hw5v31hw5v31h.png?raw=true" class="w-full h-48 object-cover zoomable" onclick="openLightbox(this.src)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cross-Platform Apps</h3>
+                        <p class="text-gray-400 text-sm lang-en">Building powerful mobile and desktop applications using Flutter and Visual Studio.</p>
+                        <p class="text-gray-400 text-sm lang-ru lang-hidden">Создание мощных мобильных и десктопных приложений на Flutter и Visual Studio.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 card-hover shadow-2xl">
+                    <img src="https://github.com/bt0501/portfolio/blob/main/Gemini_Generated_Image_4lsfz14lsfz14lsf.png?raw=true" class="w-full h-48 object-cover zoomable" onclick="openLightbox(this.src)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Algorithm Trading Tools</h3>
+                        <p class="text-gray-400 text-sm lang-en">Custom Python-based monitoring systems for market liquidity and order flow.</p>
+                        <p class="text-gray-400 text-sm lang-ru lang-hidden">Системы мониторинга ликвидности и потока ордеров на базе Python.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 card-hover shadow-2xl">
+                    <img src="https://github.com/bt0501/portfolio/blob/main/Gemini_Generated_Image_n79nqmn79nqmn79n.png?raw=true" class="w-full h-48 object-cover zoomable" onclick="openLightbox(this.src)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Backend Automation</h3>
+                        <p class="text-gray-400 text-sm lang-en">Efficient server-side automation and database management for complex projects.</p>
+                        <p class="text-gray-400 text-sm lang-ru lang-hidden">Эффективная серверная автоматизация и управление базами данных.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold">
+                    <span class="lang-en">AI Image Processing & Design</span>
+                    <span class="lang-ru lang-hidden">AI обработка и Дизайн</span>
+                </h2>
+                <div class="h-[2px] bg-blue-500 flex-grow"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 card-hover">
+                    <img src="https://github.com/bt0501/portfolio/blob/main/Gemini_Generated_Image_rd42fvrd42fvrd42.png?raw=true" class="w-full zoomable" onclick="openLightbox(this.src)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">High-End AI Upscaling</h3>
+                        <p class="text-gray-400 lang-en">Converting low-resolution assets into print-ready 4K/8K graphics without quality loss.</p>
+                        <p class="text-gray-400 lang-ru lang-hidden">Преобразование изображений низкого разрешения в 4K/8K графику для печати.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 card-hover">
+                    <img src="https://github.com/bt0501/portfolio/blob/main/Gemini_Generated_Image_ub6rd9ub6rd9ub6r.png?raw=true" class="w-full zoomable" onclick="openLightbox(this.src)">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Restoration & Enhancement</h3>
+                        <p class="text-gray-400 lang-en">Forensic-level text and image restoration for archival documents and photos.</p>
+                        <p class="text-gray-400 lang-ru lang-hidden">Реставрация текста и изображений на экспертном уровне для архивов и фото.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-950 py-16 px-6 border-t border-gray-800 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+            <span class="lang-en">Start Your Project Today</span>
+            <span class="lang-ru lang-hidden">Начните свой проект сегодня</span>
+        </h2>
+        <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
+            <a href="https://t.me/bai0501" class="bg-green-600 hover:bg-green-500 text-white px-10 py-4 rounded-full font-bold transition shadow-lg">
+                <i class="fab fa-telegram mr-2"></i>Telegram: @bai0501
+            </a>
+            <p class="text-gray-500">Available on Upwork</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const enNodes = document.querySelectorAll('.lang-en');
+            const ruNodes = document.querySelectorAll('.lang-ru');
+            enNodes.forEach(n => n.classList.toggle('lang-hidden'));
+            ruNodes.forEach(n => n.classList.toggle('lang-hidden'));
+        }
+
+        // Функции для Lightbox
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            lbImg.src = src;
+            lb.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Запрет прокрутки сайта
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Возврат прокрутки
+        }
+    </script>
+</body>
+</html>
